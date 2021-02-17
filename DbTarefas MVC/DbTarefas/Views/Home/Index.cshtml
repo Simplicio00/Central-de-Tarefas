@@ -1,0 +1,54 @@
+﻿@model List<DbTarefas.Models.Tarefa>
+@{
+	List<Tarefa> lista = Model.ToList();
+	ViewData["Title"] = "Home Page";
+}
+	<div class="container" style="text-align:center; margin:40px;">
+		<h4> Listagem de tarefas </h4>
+
+	</div>
+	<div class="container-fluid" style="padding:10px;">
+
+		@if (TempData["MSGSS1"] != null)
+		{
+			<span style="font-size:15px;" class="text-success">@TempData["MSGSS1"]</span>
+		}
+
+		@if (lista != null)
+		{
+			@foreach (var item in lista)
+			{
+
+				<div class="card" style="margin:20px;">
+					<h5 class="card-header">@item.ContatoIdNavigation.Email</h5>
+					<div class="card-body" style="display:flex; justify-content:space-between; align-items:center;">
+						@if (item.Status == "Em espera")
+						{
+							<h5 class="card-title" style="color:darkblue">@item.Status</h5>
+						}
+						@if (item.Status == "Em andamento")
+						{
+							<h5 class="card-title" style="color:darkred">@item.Status</h5>
+						}
+						@if (item.Status == "Concluído")
+						{
+							<h5 class="card-title" style="color:darkgreen">@item.Status</h5>
+						}
+
+						<textarea style="width:600px; height:100px; resize:none; padding:10px;" disabled class="card-text">@item.Descricao</textarea>
+						<a asp-action="TarefaEmDetalhe" asp-controller="tarefa" asp-route-id="@item.IdTarefa" style="height:40px;width:100px;" class="btn btn-primary">Ver mais</a>
+					</div>
+				</div>
+
+			}
+
+		}
+		else
+		{
+			<h6>Não há nada aqui, cadastre uma <a asp-action="tarefa">tarefa</a> para listar.</h6>
+		}
+
+
+	</div>
+
+	

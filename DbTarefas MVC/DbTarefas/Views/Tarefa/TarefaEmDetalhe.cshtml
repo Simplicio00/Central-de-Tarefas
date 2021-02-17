@@ -1,0 +1,140 @@
+﻿@model Tarefa
+@{
+	ViewData["Title"] = "TarefaEmDetalhe";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+	var listaGenerica = DbTarefas.Utilitarios.Listagem.Status.ToList();
+	var listaGenerica2 = DbTarefas.Utilitarios.Listagem.Impacto.ToList();
+}
+
+
+
+	<div class=" container-fluid">
+		<h1>Tarefa</h1>
+		
+
+
+		<div class="container">
+
+			<div style="width:100%; height:100px; text-align:center; display:flex; justify-content:center; flex-direction:column;">
+				<form method="post" asp-action="DesativarTarefa" asp-route-id="@Model.IdTarefa">
+					<button type="submit"  class="ctf-btn ctf2">Desativar</button>
+				</form>
+
+				@if (@TempData["MSGSS"] != null)
+				{
+					<span style="font-size:15px;" class="text-success">@TempData["MSGSS"].ToString()</span>
+				}
+
+				@if (TempData["MSGERRO"] != null)
+				{
+					<span style="font-size:15px; " class="table-danger">@TempData["MSGERRO"].ToString()</span>
+				}
+
+
+
+			</div>
+
+
+
+			<form method="post" asp-action="TarefaEmDetalhe">
+				<div class="form-group fmgroup2">
+					<div class="form-group-2">
+
+						<label asp-for="Origem" for="exampleFormControlSelect1"></label>
+						<select style="width:400px;" asp-for="Origem" asp-items="@ViewBag.Contatos" class="form-control" id="exampleFormControlSelect1">
+							<option></option>
+						</select>
+						<span asp-validation-for="Origem" class="text-danger"></span>
+
+
+					</div>
+					<div class="form-group-2">
+						<label asp-for="Responsavel" for="exampleFormControlInput1"></label>
+						<input asp-for="Responsavel" class="form-control" id="exampleFormControlInput1">
+						<span asp-validation-for="Responsavel" class="text-danger"></span>
+
+					</div>
+
+					<div class="form-group-2">
+						<label asp-for="DataConclusao" for="exampleFormControlInput1">Data de conclusão</label>
+						<input asp-for="DataConclusao" type="date" class="form-control" id="exampleFormControlInput1">
+						<span asp-validation-for="DataConclusao" class="text-danger"></span>
+
+					</div>
+					<div class="form-group-2">
+						<label asp-for="DataConclusaoPrevista" for="exampleFormControlInput1">Data de conclusão prevista</label>
+						<input asp-for="DataConclusaoPrevista" type="date" class="form-control" id="exampleFormControlInput1">
+						<span asp-validation-for="DataConclusaoPrevista" class="text-danger"></span>
+					</div>
+
+
+				</div>
+
+				<div class="form-group trd-class trd2">
+					<div>
+						<div class="form-group-2">
+							<label asp-for="Area" for="exampleFormControlInput1">Área de atuação</label>
+							<input style="width:300px !important;" asp-for="Area" type="text" class="form-control" id="atuacao01">
+							<span asp-validation-for="Area" class="text-danger"></span>
+						</div>
+					</div>
+
+					<div>
+						<label asp-for="Status" for="exampleFormControlSelect1"></label>
+						<select asp-for="Status" asp-items="listaGenerica" class="form-control" id="exampleFormControlSelect1">
+							<option value=""></option>
+						</select>
+						<span asp-validation-for="Status" class="text-danger"></span>
+
+					</div>
+
+					<div>
+						<label asp-for="Impacto" for="exampleFormControlSelect1"></label>
+						<select asp-for="Impacto" asp-items="listaGenerica2" class="form-control" id="exampleFormControlSelect1">
+							<option value=""></option>
+						</select>
+						<span asp-validation-for="Impacto" class="text-danger"></span>
+					</div>
+
+				</div>
+
+
+				<div class="form-group" id="text-form">
+
+					<div class="text-form-2">
+						<label asp-for="Observacoes" for="exampleFormControlTextarea1">Observações</label>
+						<textarea asp-for="Observacoes" class="form-control textarea-form" rows="3"></textarea>
+						<span asp-validation-for="Observacoes" class="text-danger"></span>
+
+					</div>
+
+					<div class="text-form-2">
+						<label asp-for="Descricao" for="exampleFormControlTextarea1">Descrição</label>
+						<textarea asp-for="Descricao" class="form-control textarea-form" rows="3"></textarea>
+						<span asp-validation-for="Descricao" class="text-danger"></span>
+
+					</div>
+
+				</div>
+
+				<div class="custom-file" style="display:flex;justify-content:center; align-content:center; padding:10px;align-items:center; flex-direction:column; margin:30px; width:100%; height:200px;">
+					<select asp-items="@ViewBag.Contatos" asp-for="ContatoId" class="form-control" id="exampleFormControlSelect1">
+						<option value=""></option>
+					</select>
+					<span asp-validation-for="ContatoId" class="text-danger"></span>
+
+					<input type="hidden" asp-for="IdTarefa" />
+
+					<button type="submit" class="ctf-btn">Atualizar</button>
+				</div>
+
+			</form>
+
+
+
+
+
+		</div>
+
+
+	</div>

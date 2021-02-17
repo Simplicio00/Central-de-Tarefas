@@ -1,0 +1,15 @@
+﻿
+
+
+	<div class="custom-file" style="background-color:darkgray;display:flex;justify-content:center; align-content:center; padding:10px;align-items:center; flex-direction:column; margin:30px; width:100%; height:200px;">
+		<input class="form-control" type="text" value="@parametro" placeholder="Cadastre um novo contato" id="parametro" name="parametro" style="width:400px;">
+		<button id="contatoBotao" type="submit" class="ctf-btn">Registrar</button>
+	</div>
+
+
+
+@code {
+	[Parameter]
+	public string parametro { get; set; }
+
+}
