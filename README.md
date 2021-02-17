@@ -1,10 +1,9 @@
 # Central-de-Tarefas
 Central para cadastro de tarefas associadas a um contato.
 
-Seja bem vindo ao projeto demonstrativo da central de tarefas. 
 
+![alt text](https://i.ibb.co/0Z10RHB/anotacao-Central.jpg)
 ![alt text](https://i.ibb.co/ZgRqBJ8/demo-Listagem.jpg)
-
 
 
 # Ao iniciar
