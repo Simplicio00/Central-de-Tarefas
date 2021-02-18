@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "coa3lYM/SXBSCco/w7xuypnIJEcKD3xeNvmhH1qWymGtyR+n7joZKU1aOFPZfE1FyO/y62eXRLY1wMGmAoEzNQ==",
+  "dgSpecHash": "8BCnTK+3JDRYGVCPxsQDn5evZNgJd5wv2ZGKP8qqnsNHVrvgC5Rpy/6eBxfZS3rnLhZ0gtd68Byhfxkd+sYmOQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Acer\\Desktop\\Cadastro de tarefas\\DbTarefas\\DbTarefas\\DbTarefas.csproj",
+  "projectFilePath": "C:\\Users\\Acer\\Desktop\\Código\\Central-de-Tarefas\\DbTarefas MVC\\DbTarefas\\DbTarefas.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Acer\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Acer\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

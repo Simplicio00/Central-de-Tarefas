@@ -18,44 +18,45 @@ namespace DbTarefas.Models
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int IdTarefa { get; set; }
 
-		[Display(Name = "Data de conclusão prevista")]
+
+		[Required]
 		public DateTime DataConclusaoPrevista { get; set; }
 
-		[Display(Name = "Data de conclusão")]
+		[Required]
 		public DateTime DataConclusao { get; set; }
 
-		[Display(Name = "Área de atuação")]
+		[Required]
 		public string Area { get; set; }
 		
-		[Display(Name = "Grau de importância")]
+		[Required]
 		public string Impacto { get; set; }
 
-		[Display(Name = "Progresso")]
+		[Required]
 		public string Status { get; set; }
 
+
+		[Required]
 		[StringLength(30)]
 		public string Origem { get; set; }
 
+		[Required]
 		[StringLength(30)]
-		[Display(Name = "Responsável")]
 		public string Responsavel { get; set; }
 
+		[Required]
 		[DataType(DataType.Text)]
-		[Display(Name = "Descrição")]
 		public string Descricao { get; set; }
 
+
+		[Required]
 		[DataType(DataType.Text)]
-		[Display(Name = "Observações")]
 		public string Observacoes { get; set; }
-
-
 
 
 		public bool Ativo { get; set; }
 
 
-
-		[Display(Name = "Contato")]
+		[Required]
 		public int ContatoId { get; set; }
 
 

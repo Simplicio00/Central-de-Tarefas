@@ -72,12 +72,29 @@ namespace DbTarefas.Controllers
 		public async Task<IActionResult> TarefaEmDetalhe(int id)
 		{
 			ViewBag.Contatos = _contato.Listar().Result.Select(a => new SelectListItem(a.Email, a.ContatoId.ToString()));
-			return View(await _tarefa.TarefaPorId(id)); 
+
+			var existente = await _tarefa.TarefaPorId(id);
+
+			var viewModel = new AtualizacaoViewModel(){
+				Area = existente.Area,
+				DataConclusao = existente.DataConclusao,
+				DataConclusaoPrevista = existente.DataConclusaoPrevista,
+				Descricao = existente.Descricao,
+				Impacto = existente.Impacto,
+				Origem = existente.Origem,
+				Status = existente.Status,
+				Responsavel = existente.Responsavel,
+				Observacoes = existente.Observacoes,
+				ContatoId = existente.ContatoId,
+				IdTarefa = existente.IdTarefa
+			};
+			
+			return View(viewModel); 
 		}
 
 
 		[HttpPost]
-		public async Task<IActionResult> TarefaEmDetalhe(Tarefa tarefa)
+		public async Task<IActionResult> TarefaEmDetalhe(AtualizacaoViewModel tarefa)
 		{
 			if (ModelState.IsValid)
 			{

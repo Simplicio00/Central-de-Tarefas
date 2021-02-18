@@ -8,6 +8,8 @@ namespace DbTarefas.Utilitarios.ViewModel
 {
 	public class AtualizacaoViewModel
 	{
+		public int IdTarefa { get; set; }
+
 		[Required(ErrorMessage = "A data é obrigatória")]
 		[Display(Name = "Data de conclusão prevista")]
 		public DateTime DataConclusaoPrevista { get; set; }

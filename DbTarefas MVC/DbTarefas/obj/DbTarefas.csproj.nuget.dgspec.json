@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Acer\\Desktop\\Cadastro de tarefas\\DbTarefas\\DbTarefas\\DbTarefas.csproj": {}
+    "C:\\Users\\Acer\\Desktop\\Código\\Central-de-Tarefas\\DbTarefas MVC\\DbTarefas\\DbTarefas.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Acer\\Desktop\\Cadastro de tarefas\\DbTarefas\\DbTarefas\\DbTarefas.csproj": {
+    "C:\\Users\\Acer\\Desktop\\Código\\Central-de-Tarefas\\DbTarefas MVC\\DbTarefas\\DbTarefas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\Cadastro de tarefas\\DbTarefas\\DbTarefas\\DbTarefas.csproj",
+        "projectUniqueName": "C:\\Users\\Acer\\Desktop\\Código\\Central-de-Tarefas\\DbTarefas MVC\\DbTarefas\\DbTarefas.csproj",
         "projectName": "DbTarefas",
-        "projectPath": "C:\\Users\\Acer\\Desktop\\Cadastro de tarefas\\DbTarefas\\DbTarefas\\DbTarefas.csproj",
+        "projectPath": "C:\\Users\\Acer\\Desktop\\Código\\Central-de-Tarefas\\DbTarefas MVC\\DbTarefas\\DbTarefas.csproj",
         "packagesPath": "C:\\Users\\Acer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Acer\\Desktop\\Cadastro de tarefas\\DbTarefas\\DbTarefas\\obj\\",
+        "outputPath": "C:\\Users\\Acer\\Desktop\\Código\\Central-de-Tarefas\\DbTarefas MVC\\DbTarefas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -86,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.406\\RuntimeIdentifierGraph.json"
         }
       }
     }
