@@ -139,7 +139,7 @@ namespace DbTarefas.Controllers
 		public async Task<IActionResult> NovoContato(string parametro)
 		{
 
-			if (ModelState.IsValid && parametro.Length > 5)
+			if (!String.IsNullOrEmpty(parametro) && parametro.Length > 5)
 			{
 				bool emailValido = _validacao.IsEmailTrue(parametro);
 
