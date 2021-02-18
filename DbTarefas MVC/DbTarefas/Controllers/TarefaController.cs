@@ -57,7 +57,7 @@ namespace DbTarefas.Controllers
 
 				TempData["MSGSS1"] = "Cadastro concluído com sucesso!";
 
-				return View(tarefa);
+				return RedirectToAction("index","home");
 			}
 			else
 			{
@@ -136,7 +136,7 @@ namespace DbTarefas.Controllers
 		public async Task<IActionResult> NovoContato(string parametro)
 		{
 
-			if (ModelState.IsValid && parametro != null)
+			if (ModelState.IsValid && parametro.Length > 5)
 			{
 				bool resultado =  _validacao.ValidacaoEmail(_contato.Listar().Result, parametro);
 

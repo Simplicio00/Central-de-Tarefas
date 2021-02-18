@@ -14,7 +14,7 @@
 			<span style="font-size:15px;" class="text-success">@TempData["MSGSS1"]</span>
 		}
 
-		@if (lista != null)
+		@if (lista != null || lista.Count != 0)
 		{
 			@foreach (var item in lista)
 			{
@@ -43,9 +43,9 @@
 			}
 
 		}
-		else
+		@if(lista.Count == 0 || lista == null)
 		{
-			<h6>Não há nada aqui, cadastre uma <a asp-action="tarefa">tarefa</a> para listar.</h6>
+			 <h6 style="text-align:center; margin:40px;"> Não há nada aqui, cadastre uma <a asp-action="tarefa" asp-controller="tarefa" >tarefa</a> para listar.</h6>
 		}
 
 
