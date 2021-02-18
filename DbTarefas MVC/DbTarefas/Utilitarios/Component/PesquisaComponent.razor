@@ -1,0 +1,11 @@
+<div class="md-form active-cyan active-cyan-2 mb-3" style="width: 100%; display:flex;justify-content:center;">
+	<img style="width:50px;" src="http://localhost:5000/img/ipesc.png" />
+    <input class="form-control" id="pesquisa" name="pesquisa" value="@pesquisa" type="text" style="width:80%; height:40px;" placeholder="Pesquisar por uma tarefa" aria-label="Search">
+    <button type="submit" style="width:60px; height:40px; border:none; color:white; background:darkblue;"> > </button>
+</div>
+
+@code{
+
+    [Parameter]
+    public string pesquisa { get; set; }
+}

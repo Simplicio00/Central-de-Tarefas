@@ -316,3 +316,5 @@ C:\Users\Acer\Desktop\Código\Central-de-Tarefas\DbTarefas MVC\DbTarefas\obj\Deb
 C:\Users\Acer\Desktop\Código\Central-de-Tarefas\DbTarefas MVC\DbTarefas\obj\Debug\netcoreapp3.1\DbTarefas.dll
 C:\Users\Acer\Desktop\Código\Central-de-Tarefas\DbTarefas MVC\DbTarefas\obj\Debug\netcoreapp3.1\DbTarefas.pdb
 C:\Users\Acer\Desktop\Código\Central-de-Tarefas\DbTarefas MVC\DbTarefas\obj\Debug\netcoreapp3.1\DbTarefas.genruntimeconfig.cache
+C:\Users\Acer\Desktop\Código\Central-de-Tarefas\DbTarefas MVC\DbTarefas\obj\Debug\netcoreapp3.1\RazorDeclaration\Utilitarios\Component\PesquisaComponent.razor.g.cs
+C:\Users\Acer\Desktop\Código\Central-de-Tarefas\DbTarefas MVC\DbTarefas\obj\Debug\netcoreapp3.1\Razor\Utilitarios\Component\PesquisaComponent.razor.g.cs

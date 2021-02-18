@@ -17,5 +17,7 @@ namespace DbTarefas.Repositorios.Interfaces
 		Task Atualizar(Tarefa tarefa);
 
 		Task Desativar(int id);
+
+		Task<List<Tarefa>> Pesquisar(string pesquisa);
 	}
 }

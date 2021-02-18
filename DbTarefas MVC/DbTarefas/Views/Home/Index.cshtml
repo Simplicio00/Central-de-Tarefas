@@ -1,8 +1,19 @@
 ﻿@model List<DbTarefas.Models.Tarefa>
 @{
-	List<Tarefa> lista = Model.ToList();
 	ViewData["Title"] = "Home Page";
+	List<Tarefa> lista = Model.ToList();
+	string pesquisa = Context.Request.Query["pesquisa"];
 }
+
+	<div class="container" style="text-align:center; margin:20px;">
+		
+		<form method="get" asp-action="index" >
+			<component type="typeof(PesquisaComponent)" render-mode="Static" Param-pesquisa="@pesquisa"> </component>
+		</form>
+
+	</div>
+
+
 	<div class="container" style="text-align:center; margin:40px;">
 		<h4> Listagem de tarefas </h4>
 

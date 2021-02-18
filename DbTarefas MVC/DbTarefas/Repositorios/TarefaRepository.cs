@@ -48,9 +48,7 @@ namespace DbTarefas.Repositorios
 			}
 		}
 
-		public async Task<List<Tarefa>> ListarTarefas() => await ctx.Tarefa.AsTracking()
-																.Include(a => a.ContatoIdNavigation)
-																.Where(a => a.Ativo == true).ToListAsync();
+		public async Task<List<Tarefa>> ListarTarefas() => await ctx.Tarefa.AsTracking().Include(a => a.ContatoIdNavigation).Where(a => a.Ativo == true).ToListAsync();
 
 		public async Task<Tarefa> TarefaPorId(int id) => await ctx.Tarefa.Where(a => a.IdTarefa == id && a.Ativo == true).FirstOrDefaultAsync();
 
@@ -88,5 +86,9 @@ namespace DbTarefas.Repositorios
 			
 
 		}
-	}
+
+        public async Task<List<Tarefa>> Pesquisar(string pesquisa) => await ctx.Tarefa.AsTracking().Include(a => a.ContatoIdNavigation).Where(a => a.Descricao.Contains(pesquisa)).Where(a => a.Ativo == true).ToListAsync();
+
+
+    }
 }

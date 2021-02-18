@@ -22,8 +22,12 @@ namespace DbTarefas.Controllers
 			this._tarefa = _tarefa;
 		}
 
-		public async Task<IActionResult> Index()
+		public async Task<IActionResult> Index(string pesquisa)
 		{
+			if(pesquisa != null){
+				return View(await _tarefa.Pesquisar(pesquisa));
+			}
+
 			return View(await _tarefa.ListarTarefas());
 		}
 

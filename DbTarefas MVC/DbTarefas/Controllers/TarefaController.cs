@@ -41,8 +41,7 @@ namespace DbTarefas.Controllers
 			{
 
 				await _tarefa.Cadastrar(
-					new Tarefa()
-					{
+					new Tarefa(){
 						Area = tarefa.Area,
 						DataConclusao = tarefa.DataConclusao,
 						DataConclusaoPrevista = tarefa.DataConclusaoPrevista,
@@ -94,6 +93,7 @@ namespace DbTarefas.Controllers
 
 
 		[HttpPost]
+		[ValidateAntiForgeryToken]
 		public async Task<IActionResult> TarefaEmDetalhe(AtualizacaoViewModel tarefa)
 		{
 			ViewBag.Contatos = _contato.Listar().Result.Select(a => new SelectListItem(a.Email, a.ContatoId.ToString()));

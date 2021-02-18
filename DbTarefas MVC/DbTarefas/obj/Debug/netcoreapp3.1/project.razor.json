@@ -65,6 +65,59 @@
         }
       },
       {
+        "HashCode": 665500933,
+        "Kind": "Components.Component",
+        "Name": "DbTarefas.Utilitarios.Component.PesquisaComponent",
+        "AssemblyName": "DbTarefas",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "PesquisaComponent"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "pesquisa",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "pesquisa"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DbTarefas.Utilitarios.Component.PesquisaComponent"
+        }
+      },
+      {
+        "HashCode": -418191289,
+        "Kind": "Components.Component",
+        "Name": "DbTarefas.Utilitarios.Component.PesquisaComponent",
+        "AssemblyName": "DbTarefas",
+        "CaseSensitive": true,
+        "TagMatchingRules": [
+          {
+            "TagName": "DbTarefas.Utilitarios.Component.PesquisaComponent"
+          }
+        ],
+        "BoundAttributes": [
+          {
+            "Kind": "Components.Component",
+            "Name": "pesquisa",
+            "TypeName": "System.String",
+            "Metadata": {
+              "Common.PropertyName": "pesquisa"
+            }
+          }
+        ],
+        "Metadata": {
+          "Runtime.Name": "Components.IComponent",
+          "Common.TypeName": "DbTarefas.Utilitarios.Component.PesquisaComponent",
+          "Components.NameMatch": "Components.FullyQualifiedNameMatch"
+        }
+      },
+      {
         "HashCode": 2012882598,
         "Kind": "Components.Component",
         "Name": "Microsoft.AspNetCore.Components.Authorization.AuthorizeRouteView",
@@ -14493,6 +14546,11 @@
       "FilePath": "c:\\Users\\Acer\\Desktop\\Código\\Central-de-Tarefas\\DbTarefas MVC\\DbTarefas\\Views\\Tarefa\\Tarefa.cshtml",
       "TargetPath": "Views\\Tarefa\\Tarefa.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\Acer\\Desktop\\Código\\Central-de-Tarefas\\DbTarefas MVC\\DbTarefas\\Utilitarios\\Component\\PesquisaComponent.razor",
+      "TargetPath": "Utilitarios\\Component\\PesquisaComponent.razor",
+      "FileKind": "component"
     },
     {
       "FilePath": "c:\\Users\\Acer\\Desktop\\Código\\Central-de-Tarefas\\DbTarefas MVC\\DbTarefas\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
