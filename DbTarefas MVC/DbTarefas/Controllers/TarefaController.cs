@@ -96,6 +96,8 @@ namespace DbTarefas.Controllers
 		[HttpPost]
 		public async Task<IActionResult> TarefaEmDetalhe(AtualizacaoViewModel tarefa)
 		{
+			ViewBag.Contatos = _contato.Listar().Result.Select(a => new SelectListItem(a.Email, a.ContatoId.ToString()));
+
 			if (ModelState.IsValid)
 			{
 				await _tarefa.Atualizar( new Tarefa() { 
@@ -115,7 +117,8 @@ namespace DbTarefas.Controllers
 
 				return RedirectToAction("index","home");
 			}
-
+	
+	
 			return View(tarefa);
 		}
 
