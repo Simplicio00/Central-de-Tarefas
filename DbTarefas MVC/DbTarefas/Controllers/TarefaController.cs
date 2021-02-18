@@ -141,6 +141,15 @@ namespace DbTarefas.Controllers
 
 			if (ModelState.IsValid && parametro.Length > 5)
 			{
+				bool emailValido = _validacao.IsEmailTrue(parametro);
+
+				if(emailValido.Equals(false))
+				{
+					TempData["MSGERRO"] = "Este E-Mail é inválido";
+					await Task.Delay(1000);
+					return RedirectToAction("Tarefa");
+				}
+
 				bool resultado =  _validacao.ValidacaoEmail(_contato.Listar().Result, parametro);
 
 				if (resultado.Equals(false))
